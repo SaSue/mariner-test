@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+  mariner:
+    build: .
+    container_name: test
+    restart: unless-stopped
+
+    command: ["/usr/bin/mariner"]
+
+    ports:
+      - "5000:5000"
+
+    devices:
+      - "/dev/serial0:/dev/ttyS0"
+
+    volumes:
+      - /mnt/usb:/mnt/usb_share
+      - ./config.toml:/etc/mariner/config.toml:ro
