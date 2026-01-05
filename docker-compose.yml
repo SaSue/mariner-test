@@ -2,6 +2,7 @@ version: "3.8"
 
 services:
   mariner:
+    platform: linux/arm/v7
     build: .
     container_name: test
     restart: unless-stopped
