@@ -17,7 +17,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libdrm2 libxcb1 libxau6 libasound2 \
  && rm -rf /var/lib/apt/lists/*
 RUN wget https://github.com/beaudeanadams/mariner/releases/download/v0.2.1-1/mariner3d_0.2.1-1_armhf.deb
-RUN sudo dpkg -i mariner3d_0.2.1-1_armhf.deb
+RUN dpkg -i mariner3d_0.2.1-1_armhf.deb
 
 EXPOSE 5000
 
